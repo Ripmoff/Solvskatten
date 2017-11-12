@@ -1,0 +1,986 @@
+/* CSS RESET (stopper nettlesere som f.eks. opera fra å ødelegge cssen min) - Stops Web-browsers like Opera from runing the CSS on the site. */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	font-family: 'Open Sans', 'Georgia', sans-serif, serif;
+}
+
+body {
+	font-size: 16px; /* This is the base font size of the whole site and the site will use this if no other font size is set */
+    line-height: 1.5;
+	background-color: #f4f4f6; /* The base background color that is applied to the site */
+}
+
+/* HEADER (alt på toppen av siden)*/
+
+#header-global {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	background-color: white;
+	box-shadow: 0 0 12px #f1f1f1;
+}
+
+/* LOGO (logoen på toppen av siden) */
+
+#header-logo-global {
+	display: block;
+	position: relative;
+	text-align: center;
+	border-bottom: 2px solid #D7D7D9;
+}
+
+.container {
+	max-width: 930px;
+	margin: 0 auto;
+	padding: 15px 0 15px;
+}
+
+
+.clearfix::after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	clear: both;
+	height: 0;
+	content: "";
+}
+
+.clearfix{
+	display: inline-block;
+}
+
+* html .clearfix { 
+	height: 1%; 
+}
+
+.clearfix { 
+	display: block; 
+}
+
+#header-logo-global img {
+	display: block;
+	margin: auto;
+	max-width: 75%;
+}
+
+/* NAVBAR (navigasjons baren) */
+
+#header-navbar-wrapper-global {
+	display: block;
+	padding: 1px 30px 0;
+	position: relative;
+	background-color: #f9f9fb;
+	border-bottom: 2px solid #e8e8e8;
+    /* This is a border, but it only applies to the bottom of the navbar */  
+}
+
+#header-navbar-global {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+
+#header-navbar-global ul {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	list-style-type: none;
+	font-size: 20px;
+	text-align: center;
+}
+
+#header-navbar-global li {
+	display: inline-block;
+	position: relative;
+	width: auto;
+	margin: 0 50px;
+	border-bottom: 1px solid transparent;
+	
+}
+
+#header-navbar-global li a {
+    display: block;
+    padding: 10px 16px 10px;
+    position: relative;
+    color: #000;
+	text-align: center;
+    text-decoration: none;
+    width: auto;
+    font-weight: bold;
+}
+
+#header-navbar-global a:hover { /*  Controls the navbar on hover */
+	color: #000;
+}
+
+#header-navbar-global .dropdown {
+	display: none;
+	position: absolute;
+    top: 100%;
+    left: 50%;
+    background-color: #f9f9fb;
+    border: 2px solid #e8e8e8;
+    border-top: 2px solid #2b3882;
+    z-index: 999;
+    transform: translate(-50%, 1px);
+    transition: border-color 0.3s linear 0.35s;
+    width: 200px;
+}
+
+#header-navbar-global .dropdown  li a {
+	display: block;
+	-webkit-backface-visibility: hidden;
+	border-bottom: 2px solid #e8e8e8;
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+}
+
+#header-navbar-global .dropdown li {
+	margin: 0;
+	width: 100%;
+}
+
+#header-navbar-global .dropdown li:last-child a {
+	border-bottom: 0;
+}
+
+#header-navbar-global ul li:hover .dropdown {
+	display: block;
+}
+
+
+
+
+#header-navbar-global .active > a:before {
+	visibility: visible;
+	transform: scaleX(1);
+}
+
+/* This is used to show on the nav bar, what site you are on, it makes a blue line under the 
+    selected menu item */
+
+#header-navbar-global a:before {
+	content: "";
+	position: absolute; 
+	width: 100%;
+	height: 2px;
+	bottom: -3px;
+	left: 0;
+	background-color: #2b3882;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0); /* Makes the navbar scale better while zooming or on smaller/bigger devices */
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+#header-navbar-global a:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+#header-navbar-global .dropdown:hover{ /* Makes the dropdown respond to the user */
+	border-color: #2b3882;
+}
+
+#header-navbar-global .dropdown li a:before {
+	bottom: -2px;
+}
+
+#header-navbar-global .dropdown li:last-child a:before {
+	display: none;
+}
+
+@media screen and (max-width: 950px) {
+	#header-navbar-global li {
+	margin: 0 10px;
+}
+}
+
+@media screen and (max-width: 650px) {
+	#header-navbar-global li {
+	margin: 0 auto;
+	display: block;
+	width: 150px
+}
+}
+
+/* HERO PICTURE (stort bilde på toppen) */
+
+#hero {
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.07) 50%,rgba(244, 244, 246,1) 100%), url(../bilder/Hero6.jpg);
+	position: relative;
+	width: 100%;
+	height: 650px;
+	background-repeat: no-repeat; /* This makes it so the picture wont get repeated on the whole site and will only be displayed once */
+	background-position: center;
+	background-size: cover;
+}
+
+#hero-wrapper {
+	position: absolute;
+	top: 25%;
+	left: auto;
+	transform: translate(0, 50%);
+	text-align: center;
+	background: rgba(0, 0, 0, 0.5); /* transpartent color */
+	padding: 10px 0;
+	width: 100%;
+}
+
+.hero-title { /* This styles the text that is in the hero on the front page */
+	color: #fff;
+	font-size: 42px;
+	text-transform: capitalize;
+	padding-bottom: 10px;
+}
+
+.hero-content {
+	color: #fff;
+	font-size: 20px;
+	width: 40%;
+	margin: 0 auto;
+}
+
+/* MAIN (alt i midten av siden) */
+
+#main-global {
+	position: relative;
+	padding: 40px 0 0;
+	display: block;
+	width: 100%
+}
+
+/* HOME (produkt previewen) */
+
+#home {
+	display: block;
+	padding: 1px 10px;
+	position: relative;
+}
+
+#home .product-post {
+	display: block;
+	margin: 0 auto 30px;
+	position: relative;
+	max-width: 1000px;
+	box-shadow: 0 0 12px lightgrey;
+	background-color: white;
+	border-radius: 3px;
+	transition: all 0.3s ease-in-out;
+}
+
+#home .product-post:hover {
+	box-shadow: -10px 10px 12px lightgrey;
+	transform: translate(10px, -10px);
+}
+
+#home .product-post-content {
+	padding: 10px 38% 10px 15px;
+}
+
+#home .product-post-image {
+	display: block;
+	height: 100%;
+	width: 36%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+	background-color: #2b3882;
+	transition: width 0.5s ease;
+	z-index: 999;
+	background-repeat: no-repeat;
+	border-left: 2px solid #f1f1f1;
+}
+
+/* Here are the product photos of for the front page */
+
+/* background-position: center; is used to make the photos centered, 
+so that the site shows the right parts of the pictures
+and not the top or the bottom. 
+*/
+
+.solv {
+	background-image: url(../bilder/main/Solv.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.bronse {
+	background-image: url(../bilder/main/Bronse.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.ullvotter {
+	background-image: url(../bilder/main/Ullvotter.png);
+	background-size: cover;
+}
+
+.laer {
+	background-image: url(../bilder/main/Laer.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.sjal {
+	background-image: url(../bilder/main/Sjal.jpg);
+	background-size: cover;
+}
+
+.sixpence {
+	background-image: url(../bilder/main/Sixpence.jpg);
+	background-size: cover;
+}
+
+.tova {
+	background-image: url(../bilder/main/Tova.jpg);
+	background-size: cover;
+	background-position: center;
+
+}
+
+#home .product-post-text a {
+	color: black;
+	text-decoration: none;
+}
+
+
+#home .product-post-text h1 {
+	display: block;
+	position: relative;
+	font-size: 26px;
+	margin-bottom: 10px;
+}
+
+#home .product-post-text h1:hover { /* Makes the element behave different on hover */
+	color: #2B3882;
+	text-decoration: underline #2B3882;
+}
+
+#home .product-post-text p {
+	display: block;
+	position: relative;
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+
+#home .btn { /* This styles the Wikipedia links on the front page */
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+	padding: 2px 10px;
+	background-color: #f4f4f6;
+	font-size: 14px;
+}
+
+#home .btn:hover { /* This styles the button when a mouse cursor is hoverd over */
+	border-color: #2b3882;
+}
+
+#home .btn:active {  /* This makes the button show a response when you click on it */
+	background-color: #ada6a6;
+}
+
+@media screen and (max-width: 450px) { /* This is what makes this part of our site responstive to the resolution of the device that is browsing it */
+#home .product-post-content {
+	padding: 210px 15px 10px;
+}
+#home .product-post-image {
+	height: 200px;
+	width: 100%;
+	border-top-left-radius: 3px;
+	border-bottom-right-radius: 0;
+}
+}
+
+/* PRODUCT (dette er hvor alle produktene er) */
+
+#product {
+	display: block;
+	padding: 30px 10px;
+	position: relative;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+#product .small-product-post-wrapper {
+	display: inline-block;
+	position: relative;
+	width: 100%
+}
+
+#product .small-product-post-wrapper h1 {
+	display: block;
+	max-width: 100%;
+	margin: 30px 25px;
+	text-align: left;
+	border-bottom: 2px solid #2B3882;
+	font-size: 40px;
+	font-weight: normal;
+}
+
+#product hr { /* Horizontal Line */
+	height: 1px;
+	background-color: #D7D7D9;
+	margin: 30px 25px;
+
+}
+
+#product .small-product-post {
+	display: block;
+	position: relative;
+	margin: 25px;
+	float: left;
+	height: 400px;
+	width: calc(33.33% - 50px);
+	background-color: white;
+	box-shadow: 0 0 12px lightgrey;
+	border-radius: 3px;
+	transition: all 0.3s ease-in-out;
+	overflow: hidden;
+}
+
+#product .small-product-post::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	border-radius: 2px;
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+	box-shadow: 0 0 12px lightgrey;
+}
+
+#product .small-product-post:hover {
+	transform: scale(1.05, 1.05);
+}
+
+#product .small-product-post:hover::before {
+	opacity: 1;
+}
+
+#product .small-product-post-image {
+	height: 300px;
+}
+
+#product .small-product-post-image img {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 300px;
+	height: auto;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+#product .small-product-post-image::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 70%;
+	transition: all 0.3s ease-in-out;
+	z-index: 10;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+#product .small-product-post-image:hover::before {
+	opacity: 0;
+}
+
+#product .small-product-post-content {
+	display: block;
+	padding: 10px 10px 10px;
+	position: relative;
+}
+
+#product .small-product-post-title {
+	text-align: center;
+}
+
+#product .small-product-post-description {
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.3s ease 0.6s;
+}
+
+#product .small-product-post:hover .small-product-post-description {
+	opacity: 1;
+	transition-delay: 0s;
+}
+
+/* MEDIA QUERY FOR PRODUCT */
+
+@media screen and (max-width: 1160px) {
+	#product .small-product-post {
+	width: calc(50% - 50px);
+	max-height: 600px;
+	}
+}
+
+@media screen and (max-width: 750px) { /* This part of our site is made respontive with the use of this */ 
+	#product .small-product-post {
+	width: calc(100% - 40px);
+	margin: 20px;
+	height: auto;
+	max-height: none;
+	}
+}
+
+/* ABOUT (dette er hvor all informasjonen om sløvskatten er) */
+
+#about {
+	position: relative;
+	padding: 1px 30px;
+	display: block;
+}
+
+#about .product-post {
+	position: relative;
+	margin: 0 auto 30px;
+	display: block;
+	max-width: 850px;
+	box-shadow: 0 0 12px lightgrey;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#about .product-post-content {
+	padding: 30px 50px;
+}
+
+#about .product-post-image {
+	display: block;
+	height: 195px;
+	width: 100%;
+	position: relative;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	background-image: url("../bilder/About.png");
+	background-repeat: no-repeat;
+	z-index: 999; /* Makes the element go to back */
+}
+
+#about .product-post-text h1 {
+	display: block;
+	position: relative;
+	text-align: left;
+	font-size: 40px;
+	text-align: center;
+	transition: font-size 0.3s ease;
+}
+
+#about .product-post-text h1::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #2b3882;
+	margin: 10px auto 30px;
+}
+
+#about .product-post-text h1:hover {
+	color: #000;
+}
+
+#about .product-post-text h3 {
+	display: block;
+	text-align: center;
+	width: 100px;
+	padding: 10px;
+	margin: 0 auto 20px;
+	border-bottom: 2px solid #000
+
+}
+
+#about .product-post-text p {
+	display: block;
+	position: relative;
+	margin-bottom: 12px;
+	line-height: 1.5;
+	color: grey;
+	text-align: center;
+}
+
+#about .product-post-text h5 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#about .omliste { /* A list on the about page */
+	margin: 0 auto 30px;
+	max-width: 150px;
+}
+
+#about .omliste ul { /* This makes the list have custom bullet points */
+	list-style: circle url(../bilder/garn.png)
+}
+
+@media screen and (max-width: 460px) {
+	#about .product-post-text h1 {
+	font-size: 25px;
+}
+}
+
+/* CONTACT */
+
+#contact {
+max-width: 850px;
+position: relative;
+box-shadow: 0 0 12px lightgrey; /* Makes the border around the content have a shadow */
+display: block;
+margin : 0 auto;
+background-color: white;
+}
+
+
+
+#contact-img{ /* Picture */
+	position: relative;
+	padding: 10px;
+}
+
+
+#contact-title{
+position: relative;
+display: block;
+text-align: center;
+max-width: 725px;
+border-bottom: 3px solid #2c3882;
+margin: 0 auto;
+padding: 35px 0 15px;
+font-size: 20px;
+}
+
+
+#contact-content {
+position: relative;
+max-width: 600px;
+padding: 30px 20px;
+text-align: center;
+margin: 10px auto;
+}
+
+
+#contact-content h3 {
+padding: 20px;
+margin: 0 auto;
+}
+
+
+#contact-content h4 {
+margin: 0 auto;
+}
+
+#contact-content p {
+	font-size: 18px;
+	padding: 13px;
+} 
+
+#contact-content table{
+	border: 2px solid #2b3882;
+	padding: 10px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+#contact-content table th:nth-of-type(2){ /* A way to select a table heading */
+	width: 50%; 
+ } 	
+
+.contact-social{
+display: block;
+margin: 0 auto;
+}
+
+.contact-social p{
+padding: 0;
+display: block;
+margin: 0 auto;
+}
+
+.contact-social label{
+	margin: 0 auto;
+	display: block;
+	padding: 10px;
+}
+
+*.contact-social-button{ /* Button for the form */
+	display: block;
+	margin: 20px auto;
+}
+
+.contact-social-button button {
+	padding: 3px 5px;
+	border: 1px solid darkgrey;
+	border-radius: 3px;
+	background-color: lightgrey;
+	cursor: pointer;
+}
+
+.contact-social-button button:hover {
+	border-color: #2B3882;
+}
+
+.contact-social-button button:active {
+	background-color: #ada6a6;
+}
+
+.fbbtn { /* Facebook button */
+	text-decoration-line: none;
+	color: white;
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+	padding: 5px 10px;
+	background-color: #3b5998;
+	border: 1px solid gray;
+	vertical-align: center;
+	border-radius: 3px;
+}
+
+.fbbtn:hover {
+	border-color: black;
+}
+
+.fbbtn:active {
+	background-color: #8b9dc3;
+}
+/* FOOTER (alt på bunnen av siden) */
+
+#footer-global {
+	display: block;
+	padding: 10px 0 0;
+	position: relative;
+	min-height: 50px;
+	background-color: transparent;
+}
+
+/* FOOTER ROUND PICTURE (det runde bilde og teksten under*/
+
+.footer-picture-wrapper {
+	display: block;
+}
+
+.footer-picture {
+	width: 150px;
+	height: 150px;
+	background-image: url(../bilder/Otter-shit.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0 auto 20px;
+	border-radius: 50%;
+	background-size: cover;
+
+}
+
+/* FOOTER CONTENT (alt som er skrevet på bunnen av siden) */
+
+#footer-content-global {
+	display: block;
+	padding: 1px 30px 20px;
+	position: relative;
+	box-shadow: 0 6px 6px -5px #888888;
+	z-index: 100;
+}
+
+#footer-content-global h1 {
+	display: block;
+	position: relative;
+	max-width: 500px;
+	margin: 0 auto 10px;
+	text-align: center;
+	font-weight: normal;
+}
+
+#footer-content-global p {
+	display: block;
+	position: relative;
+	max-width: 750px;
+	margin: 10px auto;
+	text-align: center;
+	font-size: 14px;
+}
+
+/* MAP (google map embed)*/
+
+.map-wrapper {
+	display: block;
+	width: 100%;
+	height: 380px;
+	position: relative;
+	z-index: -100px;
+}
+
+.map {  /* This scales the map with the size of the site */
+	width: 100%;
+	height: 100%;
+}
+
+/* MAP NAV (en navigasjonsbar i venstre del av google maps)*/
+
+.map-nav-container { /* This contains and styles the map */ 
+	position: absolute;
+	top: 132px;
+	left: 0;
+	z-index: 999;
+}
+
+.map-nav-box {
+	width: 355.156px;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.3) 0 1px 4px -1px;
+	margin: 10px;
+	padding: 1px;
+}
+
+.map-nav-wrapper {
+	padding: 9px 4px 9px 11px;
+	
+}
+
+.map-nav-title{
+	font-family: Roboto, Arial;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: default;
+	color: black;
+	vertical-align: top;
+	height: 20px;
+}
+
+.map-nav {
+	width: 200px;
+	display: inline-block;
+}
+
+.map-nav ul {
+	list-style-type: none;
+	margin-top: 6px;
+}
+
+.map-nav ul li {
+	margin-top: 0;
+}
+
+.map-nav ul a {
+	text-decoration-line: none;
+	color: #3a84df;
+	font-family: Roboto, Arial;
+	vertical-align: top;
+	height: 17px;
+}
+
+.map-nav ul a:hover {
+	text-decoration-line: underline;
+}
+
+.map-icon-wrapper {
+	display: inline-block;
+	vertical-align: top;
+	width: 50px;
+	float: right;
+}
+
+.map-icon {
+	text-decoration-line: none;
+	text-align: center;
+	font-size: 25px;
+}
+
+.facebook {
+	color: #3a84df;
+}
+
+.mail {
+	color: #3a84df;
+}
+
+.facebook:hover, .mail:hover {
+	color: #1e6ccc;
+}
+
+.seperator {
+	display: inline-block;
+	vertical-align: top;
+	width: 1px;
+	height: 43px;
+	float: right;
+	background-color: #5B5B5B;
+	background: linear-gradient(#fbfbfb,#e2e2e2,#fbfbfb);
+	background: -webkit-linear-gradient(top,#fbfbfb,#e2e2e2,#fbfbfb); /* Settings for other browsers */
+	background: -moz-linear-gradient(top,#fbfbfb,#e2e2e2,#fbfbfb); 
+	background: -ms-linear-gradient(top,#fbfbfb,#e2e2e2,#fbfbfb);
+}
+
+@media screen and (max-width: 499px) {
+	.map-icon {
+		display: none;
+	}
+	.seperator {
+		display: none;
+	}
+	.map-nav-box {
+		width: 267.69px;
+	}
+}
+
+@media screen and (max-width: 399px) {
+	.map-icon {
+		display: none;
+	}
+	.seperator {
+		display: none;
+	}
+	.map-nav-box {
+		max-width: 229px;
+	}
+}
+
+@media screen and (max-width: 299px) {
+	.map-icon {
+		display: none;
+	}
+	.seperator {
+		display: none;
+	}
+	.map-nav-box {
+		max-width: 129px;
+	}
+}
+
+
+/* THE VERY BOTTOM (her ligger copyright og logo) */
+
+.very-bottom {
+	padding: 10px 20px;
+	position: relative;
+	box-shadow: 0 -6px 6px -5px #888888;
+}
+
+.very-bottom img {
+	display: block;
+	position: relative;
+	float: right;
+	height: 46px;
+}
+
+.very-bottom p {
+	display: block;
+	position: relative;
+	margin: 15px 0 0;
+	font-weight: bold;
+	font-size: 12px;
+
+}

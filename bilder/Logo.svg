@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="406px"
+	 height="526px" viewBox="0 0 406 526" enable-background="new 0 0 406 526" xml:space="preserve">
+<g id="holes">
+	<ellipse transform="matrix(0.9815 -0.1914 0.1914 0.9815 -71.8726 10.9023)" cx="20.499" cy="377.5" rx="5" ry="15"/>
+	<ellipse transform="matrix(0.9815 -0.1914 0.1914 0.9815 -69.4555 14.1511)" cx="38.522" cy="366.598" rx="5" ry="14.251"/>
+	<ellipse transform="matrix(0.9815 -0.1914 0.1914 0.9815 -67.3081 17.4822)" cx="56.843" cy="357.162" rx="5" ry="13.468"/>
+	<ellipse transform="matrix(-0.9815 -0.1914 0.1914 -0.9815 690.7917 821.7297)" cx="385.085" cy="377.5" rx="5" ry="15"/>
+	<ellipse transform="matrix(-0.9815 -0.1914 0.1914 -0.9815 657.1691 796.6747)" cx="367.062" cy="366.598" rx="5" ry="14.251"/>
+	<ellipse transform="matrix(-0.9815 -0.1914 0.1914 -0.9815 622.6772 774.4688)" cx="348.742" cy="357.162" rx="5" ry="13.468"/>
+</g>
+<g id="boards">
+	<path fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M15.228,413.52
+		C89.771,356.5,171.271,390.5,202.771,165"/>
+	<path fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M57.148,453.701
+		C87.771,406.5,202.771,404.5,202.771,259.5"/>
+	<path fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M118,470.277
+		C147.271,429.5,202.771,442.5,202.771,353"/>
+	<path fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M164.821,485.388
+		C176.771,464,202.771,476,202.771,436"/>
+	<path fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M390.771,413.52
+		C316.228,356.5,234.728,390.5,203.228,165"/>
+	<path fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M348.852,453.701
+		C318.228,406.5,203.228,404.5,203.228,259.5"/>
+	<path fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M288,470.277
+		C258.728,429.5,203.228,442.5,203.228,353"/>
+	<path fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M241.178,485.388
+		C229.228,464,203.228,476,203.228,436"/>
+</g>
+<g id="outline">
+	<path fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M203.5,82.667
+		c-36.329,249.256-119,208.001-199,269.667"/>
+	<path fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M4.5,352.334
+		c0,153.166,143.666,87.333,199,162.333"/>
+	<path fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M202.5,82.667
+		c36.329,249.256,119,208.001,199,269.667"/>
+	<path fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M401.5,352.334
+		c0,153.166-143.666,87.333-199,162.333"/>
+</g>
+<g id="center">
+	<g>
+		<path d="M208,521c0,2.75-2.25,5-5,5l0,0c-2.75,0-5-2.25-5-5V5c0-2.75,2.25-5,5-5l0,0c2.75,0,5,2.25,5,5V521z"/>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Kontakt informasjon</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../CSS/Stylesheet.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="../bilder/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../bilder/favicon-16x16.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+</head>
+
+<body>
+	<header id="header-global">
+		
+		<div id="header-logo-global" class="clearfix">
+			<div class="container clearfix">
+				<a href="Index.html"><img src="../bilder/HeaderLogo.svg" alt="Header logo"></a>
+			</div>
+		</div>
+
+		<div id="header-navbar-wrapper-global">
+			
+			<div id="header-navbar-global">
+				<ul>
+					<li><a href="Index.html">Hjem</a></li> <!-- Menu -->
+					<li><a href="#">Produkter</a>  
+						<ul class="dropdown"> <!-- Dropdown menu -->
+							<li><a href="Product.html">Alle produkter</a></li>
+							<li><a href="Product.html#silver">Sølv</a></li>
+							<li><a href="Product.html#bronze">Bronse</a></li>
+							<li><a href="Product.html#wool">Ullvotter</a></li>
+							<li><a href="Product.html#leather">Lærprodukter</a></li>
+							<li><a href="Product.html#sjal">Russiske sjal</a></li>
+							<li><a href="Product.html#sixpence">Sixpence</a></li>
+							<li><a href="Product.html#tova">Tova ull</a></li>
+						</ul>
+					</li>
+					<li><a href="About.html">Solvskatten</a></li>
+					<li class="active"><a href="Contact.html">Kontakt</a></li>
+				</ul>
+			</div>
+		
+		</div>
+	
+	</header>
+
+	<main id="main-global">
+		<div id="contact">
+			<div id="contact-title"> <!-- Sidens tittel -->
+				<h1>Kontakt oss</h1>
+			</div>
+			<div id="contact-content">
+
+				<div id="contact-img">
+					<img src=../Bilder/test.jpg alt="Et bilde av vikingsølv">	
+				</div>
+
+				<h3> Åpningstider</h3>
+				<table> <!-- En tabell for åpningstider -->
+					<tr>
+						<th>Dag</th>
+						<th>Tid</th>
+					</tr>
+					<tr>
+						<td>Mandag</td>	
+						<td>11.00 - 17.00</td>
+					</tr>
+					<tr>
+						<td>Tirsdag</td>
+						<td>11.00 - 17.00</td>
+					</tr>
+					<tr>
+						<td>Onsdag</td>
+						<td>11.00 - 17.00</td>
+					</tr>
+					<tr>
+						<td>Torsdag</td>
+						<td>11.00 - 19.00</td>
+					</tr>
+					<tr>
+						<td>Fredag</td>
+						<td>11.00 - 17.00</td>
+					</tr>
+					<tr>
+						<td>Lørdag</td>
+						<td>11.00 - 16.00</td>
+					</tr>
+					<tr>
+						<td>Søndag</td>
+						<td>Stengt</td>
+					</tr>
+				</table>
+
+				<h3>Vår adresse</h3>
+
+				<p>Youngstorget 6. 1 etg. 0181 Oslo, Norge </p>
+
+				<h3>Vår epostadresse</h3>
+				<a href="mailto:post@solvskatten.no"><p>post@solvskatten.no</p></a> <!-- Epost Link -->
+				<p>
+					Her kan du sende meg epost og jeg vil svare når jeg får tid.
+				</p>
+				<p>Jeg tar i mot forslag på nye ting som kan bli laget, ris og ros. Alt mulig egentlig.</p>
+				<div class="contact-social">
+					<h3>Sosiale medier</h3>
+					<a href="https://www.facebook.com/solvskattenoslo/" class="fbbtn">Sølvskatten facebook</a>
+					<h3>Nyhetsbrev</h3>	
+					<p>Vi sender ut nyhetsbrev på epost en gang i måneden</p>
+					<p>Skriv inn din kontaktinfo her for å bli meldt på vårt nyhetsbrev.</p>
+					<form action=../html/ferdig.html method="post" > <!-- Denne sender deg til en side hvor brukeren får medling om at de har blitt medlt på -->
+						<label for="name">Navn</label>
+						<input type="text" id="name" placeholder="Ditt navn her" required>
+						<label for="email">Epost</label>
+						<input type="email" id="email" placeholder="Din epost her" required>
+						<div class="contact-social-button">
+							<button type="submit">Meld deg på</button> 
+						</div>
+
+					</form>
+					<!-- formen gjør ikke noe, men den viser at det går an å gjøre det slikt -->
+				</div>
+			</div>
+		</div>
+		
+	</main>
+
+	<footer id="footer-global">
+		
+		<div id="footer-content-global">
+			
+		</div>
+
+		<div class="map-container"><!-- Dette er et kart som er hentet fra Google Maps og viser området til virksomheten -->
+			<div class="map-wrapper">
+
+				<div class="map-nav-container">
+					<div class="map-nav-box">
+						<div class="map-nav-wrapper">
+
+							<div class="map-nav">
+								<div class="map-nav-title">
+									Linknavigasjon
+								</div>
+								<ul>
+									<li><a href="Index.html">Hjem</a></li>
+									<li><a href="Product.html">Produkter</a></li>
+									<li><a href="About.html">Solvskatten</a></li>
+									<li><a href="Contact.html">Kontakt</a></li>
+								</ul>
+							</div>
+
+							<div class="map-icon-wrapper">
+								<div class="map-icon">
+									<a href="mailto:post@solvskatten.no?Subject=Venligst%20skriv&20emne%20her" class="fa fa-envelope-o map-icon mail"></a>
+								</div>
+							</div>
+
+							<div class="seperator">
+								
+							</div>
+
+							<div class="map-icon-wrapper">
+								<div class="map-icon">
+									<a href="https://www.facebook.com/solvskattenoslo/" class="fa fa-facebook map-icon facebook"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.0329811612837!2d10.746370015866251!3d59.914999981867595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e6252ae3ea5%3A0xdf294d289387785e!2sYoungstorget+6%2C+0181+Oslo!5e0!3m2!1sno!2sno!4v1505831132373" class="map clearfix" allowfullscreen>
+				</iframe>
+			</div>
+		</div>
+
+		<div class="very-bottom clearfix">
+			<img src="../bilder/Logo.svg" alt="footer logo">
+			<p>&#169; 2017 Sølvskatten. All rights reserved.</p>
+			<p>Prosjekt startet 06.09.2017</p>
+		</div>
+	</footer>
+	
+</body>
+
+</html>
